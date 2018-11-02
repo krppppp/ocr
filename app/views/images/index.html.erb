@@ -1,0 +1,9 @@
+<%= link_to "アップロードへ",root_path %>
+<% if @images %>
+  <% @images.each_with_index do |image, index| %>
+
+
+  <p><a href="/images/<%= index+1 %>"><%= image_tag(image_path(image)) %></a></p>
+    <button>ocr</button>
+    <% end %>
+<% end %>

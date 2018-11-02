@@ -1,0 +1,67 @@
+current directory: /Users/krppppp/ocrapp/vendor/bundle/gems/mysql2-0.4.10/ext/mysql2
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20181102-16678-6w2cy7.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for ruby/thread.h... yes
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for rb_big_cmp()... yes
+-----
+Using mysql_config at /usr/local/opt/mysql@5.7/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... yes
+checking for SSL_MODE_PREFERRED in mysql.h... yes
+checking for SSL_MODE_REQUIRED in mysql.h... yes
+checking for SSL_MODE_VERIFY_CA in mysql.h... yes
+checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... yes
+checking for MYSQL.net.pvio in mysql.h... no
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+-----
+Setting rpath to /usr/local/opt/mysql@5.7/lib
+-----
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/krppppp/ocrapp/vendor/bundle/extensions/universal-darwin-17/2.3.0/mysql2-0.4.10/mkmf.log
+
+current directory: /Users/krppppp/ocrapp/vendor/bundle/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /Users/krppppp/ocrapp/vendor/bundle/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR="
+compiling infile.c
+compiling client.c
+compiling mysql2_ext.c
+compiling statement.c
+compiling result.c
+result.c:326:40: warning: incompatible pointer types assigning to 'my_bool *' (aka 'char *') from 'bool *' [-Wincompatible-pointer-types]
+    wrapper->result_buffers[i].is_null = &wrapper->is_null[i];
+                                       ^ ~~~~~~~~~~~~~~~~~~~~
+result.c:328:40: warning: incompatible pointer types assigning to 'my_bool *' (aka 'char *') from 'bool *' [-Wincompatible-pointer-types]
+    wrapper->result_buffers[i].error   = &wrapper->error[i];
+                                       ^ ~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+result.c:326:40: warning: incompatible pointer types assigning to 'my_bool *' (aka 'char *') from 'bool *' [-Wincompatible-pointer-types]
+    wrapper->result_buffers[i].is_null = &wrapper->is_null[i];
+                                       ^ ~~~~~~~~~~~~~~~~~~~~
+result.c:328:40: warning: incompatible pointer types assigning to 'my_bool *' (aka 'char *') from 'bool *' [-Wincompatible-pointer-types]
+    wrapper->result_buffers[i].error   = &wrapper->error[i];
+                                       ^ ~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+linking shared-object mysql2/mysql2.bundle
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/libressl/lib'
+ld: warning: directory not found for option '-L/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.Internal.sdk/usr/local/lib'
+ld: warning: ignoring file /usr/local/opt/mysql@5.7/lib/libmysqlclient.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/opt/mysql@5.7/lib/libmysqlclient.dylib
+
+current directory: /Users/krppppp/ocrapp/vendor/bundle/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20181102-16678-b9gq0t/mysql2

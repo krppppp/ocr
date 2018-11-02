@@ -1,0 +1,2 @@
+/Users/krppppp/ocrapp/app/helpers/ocr.rb:3:in `require': cannot load such file -- google/apis/vision_v1 (LoadError)
+	from /Users/krppppp/ocrapp/app/helpers/ocr.rb:3:in `<main>'

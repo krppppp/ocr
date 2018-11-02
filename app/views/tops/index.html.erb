@@ -1,0 +1,7 @@
+<%= form_for Image.new do |f| %>
+      <div class="text-center my-1">
+        <%=f.label :プロフィール画像の変更%>
+        <%= f.file_field :image %>
+      </div>
+  <%= f.submit "送信" %>
+<% end %>
