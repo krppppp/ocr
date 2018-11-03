@@ -1,9 +1,8 @@
-<%= link_to "アップロードへ",root_path %>
+<%= link_to "アップロードへ",root_path %>    <button><%= link_to "ocr",images_path %></button>
+
 <% if @images %>
   <% @images.each_with_index do |image, index| %>
-
-
   <p><a href="/images/<%= index+1 %>"><%= image_tag(image_path(image)) %></a></p>
-    <button>ocr</button>
+    <p>画像認証結果：<%= image.string if image.string %></p>
     <% end %>
 <% end %>

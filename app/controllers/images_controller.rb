@@ -21,11 +21,6 @@ class ImagesController < ApplicationController
     send_data @image.image, :type => 'image/jpeg', :disposition => 'inline'
   end
 
-
-  def update
-
-  end
-
   private
 
   def image_params
