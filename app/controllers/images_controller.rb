@@ -10,9 +10,9 @@ class ImagesController < ApplicationController
     if image != nil
       image_params[:image] = image.read
     end
-    system("ruby #{Rails.root}/app/helpers/ocr.rb #{image}")
     @image = Image.new(image_params)
     @image.save
+    system("ruby #{Rails.root}/app/helpers/ocr.rb #{image}")
     redirect_to images_path
   end
 
