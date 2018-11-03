@@ -10,6 +10,10 @@ https://a244.hateblo.jp/entry/2016/09/01/233000
 rootでアップロードをして送信ボタンを押すと画像indexに遷移。
 
 本当はimages#createのアクション内でrubyファイルを実行して画像認識まで行いたいが
+https://qiita.com/tyabe/items/56c9fa81ca89088c5627
+↑ruby
+
+
 
 cannot load such file -- google/apis/vision_v1
 
