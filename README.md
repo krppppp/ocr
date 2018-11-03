@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリにアップロードした文字の入ったスクショ画像をGoogleのcloud vision apiをつかって画像認証を行う
 
-Things you may want to cover:
+その結果で得た文字列をブラウザに表示するまでがこのアプリ
 
-* Ruby version
+https://a244.hateblo.jp/entry/2016/09/01/233000
+↑参考
 
-* System dependencies
+rootでアップロードをして送信ボタンを押すと画像indexに遷移。
 
-* Configuration
+本当はimages#createのアクション内でrubyファイルを実行して画像認識まで行いたいが
 
-* Database creation
+cannot load such file -- google/apis/vision_v1
 
-* Database initialization
+このエラーが帰ってきて実現せず。
 
-* How to run the test suite
+結果アップロードしたあと手動でターミナルに
 
-* Services (job queues, cache servers, search engines, etc.)
+$ ruby app/helpers/ocr.rb
 
-* Deployment instructions
-
-* ...
+を打ち込んで実行している。
